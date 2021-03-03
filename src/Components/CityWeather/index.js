@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 
 const CityWeather = ({cityWeather,setCityWeather}) => {
-    console.log(cityWeather);
+    //console.log(cityWeather);
     return (
         <Container>
         <div>
@@ -13,7 +13,7 @@ const CityWeather = ({cityWeather,setCityWeather}) => {
                 Minimum {Math.round(`${cityWeather.main.temp_min - 272.15 }` ).toFixed(2)}°C
                 </h2>
                 <h3 className="text-info">{cityWeather.name} {cityWeather.sys.country}</h3>
-                <h4 className="text-white">{cityWeather.wind.deg}° {cityWeather.wind.speed} km/hour</h4>
+                <h4 className="text-white">Wind {cityWeather.wind.deg}° Wind Speed: {cityWeather.wind.speed} km/hour</h4>
 
                 </>
             ) :("")}
